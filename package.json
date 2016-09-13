@@ -1,0 +1,25 @@
+{
+  "name": "api_login_auth",
+  "version": "1.0.0",
+  "description": "API using express/node/mongodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boyboi86/API_login_Auth.git"
+  },
+  "author": "boyboi86",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/boyboi86/API_login_Auth/issues"
+  },
+  "homepage": "https://github.com/boyboi86/API_login_Auth#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.6.0",
+    "morgan": "^1.7.0"
+  }
+}
