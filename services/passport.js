@@ -11,7 +11,7 @@ const JwtOptions = {
 };
 
 //create JWT Strategy
-const jwtLogin = new JwtStrategy(jwtOptions, function(payload, done){
+const jwtLogin = new JwtStrategy(JwtOptions, function(payload, done){
   user.findById(payload.sub, function(err, user){
     if(err) {
       return done(err, false);
