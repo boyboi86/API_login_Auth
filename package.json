@@ -4,7 +4,8 @@
   "description": "API using express/node/mongodb",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,8 @@
     "express": "^4.14.0",
     "mongoose": "^4.6.0",
     "morgan": "^1.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.10.2"
   }
 }
