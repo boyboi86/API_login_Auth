@@ -16,7 +16,16 @@ const localLogin = new LocalStrategy( localOptions , function(email, password, d
     if(!user) {
       return done(null, false);
     }
-    //verfication decrypted password against inputted password from user
+    //verfication decrypted password against inputted password from user using method comparePassword
+    user.comparePassword(password, function(err, isMatch){
+      if(err) {
+        return done(err)
+      }
+      if(!isMatch){
+        return done(null, false);
+      }
+      return done(null, user);
+    })
   })
 })
 
@@ -42,3 +51,4 @@ const jwtLogin = new JwtStrategy(JwtOptions, function(payload, done){
 
 //Tell Passport to use strategy
 passport.use(jwtLogin);
+passport.use(localLogin);
