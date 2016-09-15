@@ -5,12 +5,14 @@ const bodyParser = require('body-parser');
 const app = express();
 const router = require('./router.js');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 //db set up note: when you run mongod --dbpath */data/db
 mongoose.connect('mongodb://localhost/auth');
 
-//app set up
+//app setup
 app.use(morgan('combined'));
+app.use(cors());
 app.use(bodyParser.json({ type: '*/*' }));
 router(app);
 
