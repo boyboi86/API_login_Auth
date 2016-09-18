@@ -25,7 +25,7 @@ module.exports.signup = function (req, res, next) {
        return next(err)
     }
     if(existingUser){
-      return res.status(422).send({ error: 'Email is invalid' })
+      return res.status(422).send({ error: 'Email is used' })
     }
 
     const User = new user({
